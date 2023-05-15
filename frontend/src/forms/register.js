@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "./form.css";
 
-export function Form() {
+export function Register() {
   return (
     <div class="form-container">
       <form class="register-form">
@@ -33,9 +34,22 @@ export function Form() {
         />
         {/* Uncomment the next line to show the error message */}
         {/* <span id="email-error">Please enter an email address</span> */}
-        <button class="form-field" type="submit">
-          Register
-        </button>
+
+        <input
+          id="email"
+          class="form-field"
+          type="password"
+          placeholder="Type password"
+          name="password"
+        />
+        {/* Uncomment the next line to show the error message */}
+        {/* <span id="password-error">Please enter a password</span> */}
+
+        <Link to="/todo">
+          <button class="form-field" type="submit">
+            Register
+          </button>
+        </Link>
       </form>
     </div>
   );

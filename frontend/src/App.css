@@ -1,17 +1,107 @@
-.App {
-  text-align:left;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.form{
+.App{
+  background: linear-gradient(to right bottom,#370101,#8f2929);
+  width:100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-wrapper{
+  background: linear-gradient(to bottom left,skyblue, peachpuff, pink, skyblue);
+  min-width: 450px;
+  min-height: 650px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 3px 6px 40px black;
+  margin-bottom: 10px;
+}
+
+.shopping-list-header h1{
+  color: black;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.todo-task{
+  outline: none;
+  width: 260px;
+  padding: 15px;
+  margin-right: 25px;
+  font-size: 20px;
+  color: rgb(6, 6, 6);
+  background-color: rgb(251, 248, 248);
+  border: 1px solid rgb(95, 95, 95);
+  border-radius: 10px;
+}
+
+.add-button{
+  width: 70px;
+  padding: 15px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: peachpuff;
+  cursor: grab;
+}
+
+.but-complete,
+.but-edit,
+.but-delete {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 28px;
+  border-radius: 50%;
+}
+
+.todo-task-list {
+  display: flex;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   padding: 10px;
-  margin:5px;
+  max-height: 30px;
 }
 
-.form-wrapper{
-  border: 2px;
-  border-radius: 5px;
-  background-color: grey;
-  padding-left: 50px;
+.but-complete {
+  color: orange;
+  margin-right: 10px;
+}
+.but-edit {
+  color: #02ebbd;
+  margin-right: 10px;
 }
 
+.but-delete {
+  color: rgb(246, 79, 28);
+}
 
+.complete {
+  text-decoration-style: solid ;
+  text-decoration-line: line-through;
+  text-decoration-color: #ff6c6c;
+  opacity: 0.6;
+}
+
+.list {
+  width: 220px;
+  background-color: peachpuff;
+  border: none;
+  color: black;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-right: 15px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}

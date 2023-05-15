@@ -1,8 +1,8 @@
 from flask import jsonify, request, Blueprint
-from backend.models.user.user import User
+from models.user.user import User
 from models.db import db
 
-all_users = Blueprint('users', __name__, url_prefix='users')
+all_users = Blueprint('users', __name__, url_prefix='/users')
 
 @all_users.route('/')
 def users():
@@ -16,7 +16,7 @@ def users():
     
     return { "count":len(users), "user":results}
 
-@all_users.rout('/create', methods =['POST'])
+@all_users.route('/create', methods =['POST'])
 def new_user():
     name = request.json['name']
     email = request.json['email']

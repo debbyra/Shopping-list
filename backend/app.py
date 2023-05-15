@@ -2,7 +2,6 @@ from models import create_app, db
 # from flask_migrate import Migrate
 from models.user.user import User
 from flask_jwt_extended import JWTManager
-# from backend.profile.model import Profile
 
 app = create_app('development')
 # migrate = Migrate(app, db)
